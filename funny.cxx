@@ -16,7 +16,8 @@ int main() {
                 r+=*rit;
         }
         for (int j = 1; j < s.length(); j++){
-            //cout << "["<< s.at(j) << " - " << s.at(j-1) << "] "<< abs((s.at(j) - s.at(j-1))) << " == " << abs((r.at(j) - r.at(j-1))) << " ["<< r.at(j) << " - " << r.at(j-1) << "]" << '\n';
+            //cout << "["<< s.at(j) << " - " << s.at(j-1) << "] "<< abs((s.at(j) - s.at(j-1)))
+            //<< " == " << abs((r.at(j) - r.at(j-1))) << " ["<< r.at(j) << " - " << r.at(j-1) << "]" << '\n';
             if (!(abs((s.at(j) - s.at(j-1))) == abs((r.at(j) - r.at(j-1))))){
                 ++nf;
                 break;
