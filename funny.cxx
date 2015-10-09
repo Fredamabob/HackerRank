@@ -1,6 +1,4 @@
 #include <cmath>
-#include <cstdio>
-#include <vector>
 #include <iostream>
 #include <algorithm>
 using namespace std;
@@ -12,7 +10,8 @@ int main() {
     cin >> nCases;
     for (int i = 0; i < nCases; i ++){
         cin >> s;
-        for (string::reverse_iterator rit=s.rbegin(); rit!=s.rend(); ++rit){
+        r = "";
+        for (reverse_iterator rit=s.rbegin(); rit!=s.rend(); ++rit){
                 r+=*rit;
         }
         for (int j = 1; j < s.length(); j++){
@@ -23,12 +22,11 @@ int main() {
                 break;
             }
         }
-        if (nf <= 0)
+        if (!nf)
             cout << "Funny\n";
         else
             cout << "Not Funny\n";
         nf = 0;
-        s = ""; r = "";
     }
     return 0;
 }
